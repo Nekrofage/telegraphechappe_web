@@ -74,6 +74,24 @@ $(document).ready(function() {
                     setPositions(positions, val);
                 }
             });
+
+            $setterInput.on('change input', function() {
+                let val = parseInt($setterInput.val());
+
+                if (val > $setterMin && val < $setterMax) {
+                    setPositions(positions, val);
+                }
+
+                if (val < $setterMin) {
+                    $setterInput.val($setterMin);
+                    setPositions(positions, $setterMin);
+                }
+
+                if (val > $setterMax) {
+                    $setterInput.val($setterMax);
+                    setPositions(positions, $setterMax);
+                }
+            });
         }
     };
 });
