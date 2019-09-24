@@ -1,33 +1,50 @@
 
-.positionReg0 {
+.positionRegulator0 {
     transform: rotate(90deg);
 }
 
-.positionReg1 {
+.positionRegulator1 {
     transform: rotate(45deg);
 }
 
-.positionReg2 {
+.positionRegulator2 {
     transform: rotate(135deg);
 }
 
 
 
 
-.position0 {
+.positionIndicatorLeft0 {
     transform: rotate(-90deg);
 }
 
-.position1 {
+.positionIndicatorLeft1 {
     transform: rotate(90deg);
 }
 
 
-.position2 {
+.positionIndicatorLeft2 {
     transform: rotate(-90deg);
 }
 
-.position3 {
+.positionIndicatorLeft3 {
+    transform: rotate(-45deg);
+}
+
+.positionIndicatorRight0 {
+    transform: rotate(-90deg);
+}
+
+.positionIndicatorRight1 {
+    transform: rotate(90deg);
+}
+
+
+.positionIndicatorRight2 {
+    transform: rotate(-90deg);
+}
+
+.positionIndicatorRight3 {
     transform: rotate(-45deg);
 }
 

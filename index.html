@@ -8,34 +8,78 @@
     <body>
         <section class="main">
             <div class="main-wraper">
-                <div class="setter">
-                    <div class="setter-wrapper">
 
+
+                <div class="regulatorSetter">
+                    <div class="setter-wrapper">
                         <div class="setter-title">
                             <h2>Réglage Régulateur</h2>
                         </div>
                         <form class="setter-form">
+                        
                             <div class="setter-form-number">
-                                <input type="number" min="1" max="12" id="position" name="position">
+                                <input type="number" min="1" max="12" id="regulatorPosition" name="regulatorPosition">
                                 <div class="setter-form-controls">
                                     <div class="setter-form-controls-plus">+</div>
                                     <div class="setter-form-controls-minus">-</div>
                                 </div>
                             </div>
+
                         </form>
-
-
-
-
 
                     </div>
                 </div>
+
+                <div class="indicatorLeftSetter">
+                    <div class="setter-wrapper">
+                        <div class="setter-title">
+                            <h2>Réglage Indicateur Gauche</h2>
+                        </div>
+                        <form class="setter-form">
+                        
+                            <div class="setter-form-number">
+                                <input type="number" min="1" max="12" id="indicatorLeftPosition" name="indicatorLeftPosition">
+                                <div class="setter-form-controls">
+                                    <div class="setter-form-controls-plus">+</div>
+                                    <div class="setter-form-controls-minus">-</div>
+                                </div>
+                            </div>
+
+                        </form>
+
+                    </div>
+                </div>
+
+
+                <div class="indicatorRightSetter">
+                    <div class="setter-wrapper">
+                        <div class="setter-title">
+                            <h2>Réglage Indicateur Droite</h2>
+                        </div>
+                        <form class="setter-form">
+                        
+                            <div class="setter-form-number">
+                                <input type="number" min="1" max="12" id="indicatorRightposition" name="indicatorRightPosition">
+                                <div class="setter-form-controls">
+                                    <div class="setter-form-controls-plus">+</div>
+                                    <div class="setter-form-controls-minus">-</div>
+                                </div>
+                            </div>
+
+                        </form>
+
+                    </div>
+                </div>
+
+
+
+
                 <div class="telegraph">
                     <div class="telegraph-wrapper">
                         <div class="mast"></div>
                         <div class="regulator">
-                            <div class="indicator indicator2"></div>
-                            <div class="indicator indicator1"></div>
+                            <div class="indicator indicatorRight"></div>
+                            <div class="indicator indicatorLeft"></div>
                         </div>
                     </div>
                 </div>

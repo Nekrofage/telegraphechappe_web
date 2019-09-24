@@ -67,49 +67,88 @@
     background-color: #2980b9;
 }
 
-.main .telegraph .telegraph-wrapper .regulator .indicator1 {
+.main .telegraph .telegraph-wrapper .regulator .indicatorLeft {
     bottom: 0;
     transform-origin: bottom;
 }
 
-.main .telegraph .telegraph-wrapper .regulator .indicator2 {
+.main .telegraph .telegraph-wrapper .regulator .indicatorRight {
     top: 0;
     transform-origin: top;
 }
 
-.main .setter {
+
+
+
+
+.main .regulatorSetter,
+.main .indicatorLeftSetter,
+.main .indicatorRightSetter  
+{
     flex: 0 0 fit-content;
 }
 
-.main .setter .setter-wrapper {
+
+
+.main .regulatorSetter .setter-wrapper,
+.main .indicatorLeftSetter .setter-wrapper,
+.main .indicatorRightSetter .setter-wrapper
+{
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 30px 0;
 }
 
-.main .setter .setter-title {
+
+.main .regulatorsetter .setter-title,
+.main .indicatorLeftsetter .setter-title,
+.main .indicatorRightsetter .setter-title 
+{
     font: 24px "open_sansbold";
     color: #454545;
 }
 
-.main .setter .setter-form {
+
+
+.main .regulatorSetter .setter-form,
+.main .indicatorLeftSetter .setter-form,
+.main .indicatorRightSetter .setter-form  
+{
     margin-top: 20px;
     height: 40px;
 }
 
-.main .setter .setter-form .setter-form-number {
+
+
+.main .regulatorSetter .setter-form .setter-form-number,
+.main .indicatorLeftSetter .setter-form .setter-form-number,
+.main .indicatorRightSetter .setter-form .setter-form-number
+
+{
     display: flex;
     width: 100px;
     border: 2px solid #E5E5E5;
 }
 
-.main .setter .setter-form .setter-form-number .setter-form-controls {
+
+
+.main .regulatorSetter .setter-form .setter-form-number .setter-form-controls,
+.main .indicatorLeftSetter .setter-form .setter-form-number .setter-form-controls,
+.main .indicatorRightSetter .setter-form .setter-form-number .setter-form-controls
+{
     flex: 0 0 30px;
 }
 
-.main .setter .setter-form .setter-form-number .setter-form-controls .setter-form-controls-plus,
-.main .setter .setter-form .setter-form-number .setter-form-controls .setter-form-controls-minus {
+
+
+.main .regulatorSetter .setter-form .setter-form-number .setter-form-controls .setter-form-controls-plus,
+.main .regulatorSetter .setter-form .setter-form-number .setter-form-controls .setter-form-controls-minus,
+.main .indicatorLeftSetter .setter-form .setter-form-number .setter-form-controls .setter-form-controls-plus,
+.main .indicatorRightSetter .setter-form .setter-form-number .setter-form-controls .setter-form-controls-minus,
+.main .indicatorLeftSetter .setter-form .setter-form-number .setter-form-controls .setter-form-controls-plus,
+.main .indicatorRightSetter .setter-form .setter-form-number .setter-form-controls .setter-form-controls-minus
+{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -122,29 +161,49 @@
     transition: background-color ease-in-out .3s;
 }
 
-.main .setter .setter-form .setter-form-number .setter-form-controls .setter-form-controls-plus:hover,
-.main .setter .setter-form .setter-form-number .setter-form-controls .setter-form-controls-minus:hover {
+.main .regulatorSetter .setter-form .setter-form-number .setter-form-controls .setter-form-controls-plus:hover,
+.main .regulatorSetter .setter-form .setter-form-number .setter-form-controls .setter-form-controls-minus:hover,
+.main .indicatorLeftSetter .setter-form .setter-form-number .setter-form-controls .setter-form-controls-plus:hover,
+.main .indicatorRightSetter .setter-form .setter-form-number .setter-form-controls .setter-form-controls-minus:hover,
+.main .indicatorLeftSetter .setter-form .setter-form-number .setter-form-controls .setter-form-controls-plus:hover,
+.main .indicatorRightSetter .setter-form .setter-form-number .setter-form-controls .setter-form-controls-minus:hover 
+{
     background-color: #1e3799;
 }
 
-.main .setter .setter-form .setter-form-number .setter-form-controls .setter-form-controls-plus {
+
+.main .regulatorSetter .setter-form .setter-form-number .setter-form-controls .setter-form-controls-plus,
+.main .indicatorLeftSetter .setter-form .setter-form-number .setter-form-controls .setter-form-controls-plus,
+.main .indiatorRightSetter .setter-form .setter-form-number .setter-form-controls .setter-form-controls-plus 
+
+{
     background-color: #6a89cc;
 }
 
-.main .setter .setter-form .setter-form-number .setter-form-controls .setter-form-controls-minus {
+
+.main .regulatorSetter .setter-form .setter-form-number .setter-form-controls .setter-form-controls-minus,
+.main .indicatorLeftSetter .setter-form .setter-form-number .setter-form-controls .setter-form-controls-minus,
+.main .indicatorRightSetter .setter-form .setter-form-number .setter-form-controls .setter-form-controls-minus 
+{
     background-color: #4a69bd;
 }
 
-input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-inner-spin-button {
+
+input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-inner-spin-button,
+{
     -webkit-appearance: none;
     margin: 0;
 }
 
-input[type="number"] {
+input[type="number"] 
+{
     -moz-appearance: textfield;
 }
 
-.main .setter .setter-form .setter-form-number input[type="number"] {
+.main .regulatorSetter .setter-form .setter-form-number input[type="number"], 
+.main .indicatorLeftSetter .setter-form .setter-form-number input[type="number"], 
+.main .indicatorRightSetter .setter-form .setter-form-number input[type="number"] 
+{
     flex: 0 0 70px;
     max-width: 70px;
     display: block;

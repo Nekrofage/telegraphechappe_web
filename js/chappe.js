@@ -1,43 +1,68 @@
 $(document).ready(function() {
-    const   $setter = $('.setter'),
-            $setterInput = $setter.find('#position'),
-            $setterMin = parseInt($setterInput.attr('min')),
-            $setterMax = parseInt($setterInput.attr('max')),
-            $setterPlus = $setter.find('.setter-form-controls-plus'),
-            $setterMinus = $setter.find('.setter-form-controls-minus'),
+    const   $regulatorSetter = $('.regulatorSetter'),
+            $setterRegulatorPosition = $regulatorSetter.find('#regulatorPosition'),
+            $setterRegulatorMin = parseInt($regulatorSetter.attr('min')),
+            $setterRegulatorMax = parseInt($regulatorSetter.attr('max')),
+            $setterRegulatorPlus = $regulatorSetter.find('.setter-form-controls-plus'),
+            $setterRegulatorMinus = $regulatorSetter.find('.setter-form-controls-minus'),
+
+
+            $indicatorLeftSetter = $('.indicatorLeftSetter'),
+            $setterIndicatorLeftPosition = $indicatorLeftSetter.find('#indicatorLeftPosition'),
+            $setterIndicatorLeftMin = parseInt($regulatorLeftSetter.attr('min')),
+            $setterIndicatorLeftMax = parseInt($regulatorLeftSetter.attr('max')),
+            $setterIndicatorLeftPlus = $regulatorLeftSetter.find('.setter-form-controls-plus'),
+            $setterIndicatorLeftMinus = $regulatorLeftSetter.find('.setter-form-controls-minus'),
+
+
+            $indicatorRightSetter = $('.indicatorRightSetter'),
+            $setterIndicatorRightPosition = $indicatorRightSetter.find('#indicatorRightPosition'),
+            $setterIndicatorRightMin = parseInt($regulatorRightSetter.attr('min')),
+            $setterIndicatorRightMax = parseInt($regulatorRightSetter.attr('max')),
+            $setterIndicatorRightPlus = $regulatorRightSetter.find('.setter-form-controls-plus'),
+            $setterIndicatorRightMinus = $regulatorRightSetter.find('.setter-form-controls-minus'),
+
+
+
+
             $telegraph = $('.telegraph'),
             $regulator = $telegraph.find('.regulator'),
-            $indicator1 = $telegraph.find('.indicator1'),
-            $indicator2 = $telegraph.find('.indicator2');
+            $indicatorLeft = $telegraph.find('.indicatorLeft'),
+            $indicatorRight = $telegraph.find('.indicatorRight');
 
     // Set regulator and indicator position
     function removePositions(index, className) {
-        let pattern = /position.*/;
+        let pattern = /Position.*/;
         return (className.match(pattern) || []).join(' ');
     }
 
     function setPositions(positions, position) {
-        const   classReg = "positionReg",
-                classInd = "position";
-        let regPos,
-            ind1Pos,
-            ind2Pos;
+        const   classRegulator = "positionRegulator",
+                classIndicatorLeft = "positionIndicatorLeft",
+                classIndicatorRight = "positionIndicatorRight";
 
-        regPos = classReg + positions[position].reg;
-        ind1Pos = classInd + positions[position].ind1;
-        ind2Pos = classInd + positions[position].ind2;
+        let regulatorPos,
+            indicatorLeftPos,
+            indicatorRightPos;
+
+        regulatorPos = classRegulator + positions[position].regulator;
+        indicatorLeftPos = classIndicatorLeft + positions[position].indicatorLeft;
+        indicatorRightPos = classIndicatorLeft + positions[position].indicatorRight;
 
         // Add classes on regulator and indicators
         $regulator.removeClass(removePositions)
-                  .addClass(regPos);
-        $indicator1.removeClass(removePositions)
-                   .addClass(ind1Pos);
-        $indicator2.removeClass(removePositions)
-                   .addClass(ind2Pos);
+                  .addClass(regulatorPos);
+        $indicatorLeft.removeClass(removePositions)
+                   .addClass(indicatorLeftPos);
+        $indicatorRight.removeClass(removePositions)
+                   .addClass(indicatorRightPos);
     };
 
     // Get default position number
-    $setterInput.val($setterMin);
+    $setterRegulatorPosition.val($setterRegulatorMin);
+    $setterIndicatorLeftPosition.val($setterIndicatorLeftMin);
+    $setterIndicatorRightPosition.val($setterIndicatorRightMin);
+
 
     // Get list of positions
     let jsonFile = "js/positions.json",
@@ -55,43 +80,128 @@ $(document).ready(function() {
             // TO DO : SI une position existe OU si la position change
             setPositions(positions, $setterMin);
 
-            $setterPlus.on("click", function() {
-                let val = parseInt($setterInput.val());
+            $setterRegulatorPlus.on("click", function() {
+                let val = parseInt($setterRegulatorPosition.val());
 
-                if (val < $setterMax) {
+                if (val < $setterRegulatorMax) {
                     val += 1;
-                    $setterInput.val(val);
+                    $setterRegulatorPosition.val(val);
                     setPositions(positions, val);
                 }
             });
 
-            $setterMinus.on("click", function() {
-                let val = parseInt($setterInput.val());
+            $setterRegulatorMinus.on("click", function() {
+                let val = parseInt($setterRegulatorPosition.val());
 
-                if (val > $setterMin) {
+                if (val > $setterRegulatorMin) {
                     val -= 1;
-                    $setterInput.val(val);
+                    $setterRegulatorPosition.val(val);
                     setPositions(positions, val);
                 }
             });
 
-            $setterInput.on('change input', function() {
-                let val = parseInt($setterInput.val());
+            $setterIndicatorLeftPlus.on("click", function() {
+                let val = parseInt($setterIndicatorLeftPosition.val());
 
-                if (val > $setterMin && val < $setterMax) {
+                if (val < $setterIndicatorLeftMax) {
+                    val += 1;
+                    $setterIndicatorLeftPosition.val(val);
+                    setPositions(positions, val);
+                }
+            });
+
+            $setterIndicatorLeftMinus.on("click", function() {
+                let val = parseInt($setterIndicatorLeftPosition.val());
+
+                if (val > $setterIndicatorLeftMin) {
+                    val -= 1;
+                    $setterIndicatorLeftPosition.val(val);
+                    setPositions(positions, val);
+                }
+            });
+
+            $setterIndicatorRightPlus.on("click", function() {
+                let val = parseInt($setterIndicatorRightPosition.val());
+
+                if (val < $setterIndicatorRightMax) {
+                    val += 1;
+                    $setterIndicatorRightPosition.val(val);
+                    setPositions(positions, val);
+                }
+            });
+
+            $setterIndicatorRightMinus.on("click", function() {
+                let val = parseInt($setterIndicatorRightPosition.val());
+
+                if (val > $setterIndicatorRightMin) {
+                    val -= 1;
+                    $setterIndicatorRightPosition.val(val);
+                    setPositions(positions, val);
+                }
+            });
+
+
+            $setterRegulatorPosition.on('change input', function() {
+                let val = parseInt($setterRegulatorPosition.val());
+
+                if (val > $setterRegulatorMin && val < $setterRegukatorMax) {
                     setPositions(positions, val);
                 }
 
-                if (val < $setterMin) {
-                    $setterInput.val($setterMin);
+                if (val < $setterRegulatorMin) {
+                    $setterRegulatorPosition.val($setterRegulatorMin);
                     setPositions(positions, $setterMin);
                 }
 
-                if (val > $setterMax) {
-                    $setterInput.val($setterMax);
-                    setPositions(positions, $setterMax);
+                if (val > $setterRegulatorMax) {
+                    $setterRegulatorPosition.val($setterRegulatorMax);
+                    setPositions(positions, $setterRegulatorMax);
                 }
             });
+
+
+            $setterIndicatorLeftPosition.on('change input', function() {
+                let val = parseInt($setterIndicatorLeftPosition.val());
+
+                if (val > $setterIndicatorLeftMin && val < $setterRegukatorMax) {
+                    setPositions(positions, val);
+                }
+
+                if (val < $setterIndicatorLeftMin) {
+                    $setterIndicatorLeftPosition.val($setterIndicatorLeftMin);
+                    setPositions(positions, $setterMin);
+                }
+
+                if (val > $setterIndicatorLeftMax) {
+                    $setterIndicatorLeftPosition.val($setterIndicatorLeftMax);
+                    setPositions(positions, $setterIndicatorLeftMax);
+                }
+            });
+
+
+
+
+            $setterIndicatorRightPosition.on('change input', function() {
+                let val = parseInt($setterIndicatorRightPosition.val());
+
+                if (val > $setterIndicatorRightMin && val < $setterRegukatorMax) {
+                    setPositions(positions, val);
+                }
+
+                if (val < $setterIndicatorRightMin) {
+                    $setterIndicatorRightPosition.val($setterIndicatorRightMin);
+                    setPositions(positions, $setterMin);
+                }
+
+                if (val > $setterIndicatorRightMax) {
+                    $setterIndicatorRightPosition.val($setterIndicatorRightMax);
+                    setPositions(positions, $setterIndicatorRightMax);
+                }
+            });
+
+
+
+
         }
     };
 });
