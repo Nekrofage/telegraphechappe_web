@@ -7,8 +7,8 @@ $(document).ready(function() {
             $setterMinus = $setter.find('.setter-form-controls-minus'),
             $telegraph = $('.telegraph'),
             $regulator = $telegraph.find('.regulator'),
-            $indicator1 = $telegraph.find('.indicator1'),
-            $indicator2 = $telegraph.find('.indicator2');
+            $indicatorRight = $telegraph.find('.indicatorRight'),
+            $indicatorLeft = $telegraph.find('.indicatorLeft');
 
     // Set regulator and indicator position
     function removePositions(index, className) {
@@ -30,9 +30,9 @@ $(document).ready(function() {
         // Add classes on regulator and indicators
         $regulator.removeClass(removePositions)
                   .addClass(regPos);
-        $indicator1.removeClass(removePositions)
+        $indicatorRight.removeClass(removePositions)
                    .addClass(ind1Pos);
-        $indicator2.removeClass(removePositions)
+        $indicatorLeft.removeClass(removePositions)
                    .addClass(ind2Pos);
     };
 

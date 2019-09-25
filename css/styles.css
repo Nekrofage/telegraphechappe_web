@@ -67,12 +67,12 @@
     background-color: #2980b9;
 }
 
-.main .telegraph .telegraph-wrapper .regulator .indicator1 {
+.main .telegraph .telegraph-wrapper .regulator .indicatorRight {
     bottom: 0;
     transform-origin: bottom;
 }
 
-.main .telegraph .telegraph-wrapper .regulator .indicator2 {
+.main .telegraph .telegraph-wrapper .regulator .indicatorLeft {
     top: 0;
     transform-origin: top;
 }
