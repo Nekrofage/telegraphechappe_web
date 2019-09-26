@@ -42,3 +42,31 @@
 .indicatorRotation7 {
     transform: rotate(315deg);
 }
+
+.indicatorRotation8 {
+    transform: rotate(-45deg);
+}
+
+.indicatorRotation9 {
+    transform: rotate(-90deg);
+}
+
+.indicatorRotation10 {
+    transform: rotate(-135deg);
+}
+
+.indicatorRotation11 {
+    transform: rotate(-180deg);
+}
+
+.indicatorRotation12 {
+    transform: rotate(-225deg);
+}
+
+.indicatorRotation13 {
+    transform: rotate(-270deg);
+}
+
+.indicatorRotation14 {
+    transform: rotate(-315deg);
+}
