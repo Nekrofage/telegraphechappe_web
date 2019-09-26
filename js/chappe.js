@@ -17,23 +17,23 @@ $(document).ready(function() {
     }
 
     function setPositions(positions, position) {
-        const   classReg = "regulatorRotation",
-                classInd = "indicatorRotation";
-        let regPos,
-            ind1Pos,
-            ind2Pos;
+        const   classRegulator = "regulatorRotation",
+                classIndicator = "indicatorRotation";
+        let regulatorPosition,
+            indicatorRightPosition,
+            indicatorLefttPosition;
 
-        regPos = classReg + positions[position].regulator;
-        ind1Pos = classInd + positions[position].indicatorRight;
-        ind2Pos = classInd + positions[position].indicatorLeft;
+        regulatorPosition = classRegulator + positions[position].regulator;
+        indicatorRightPosition = classIndicator + positions[position].indicatorRight;
+        indicatorLefttPosition = classIndicator + positions[position].indicatorLeft;
 
         // Add classes on regulator and indicators
         $regulator.removeClass(removePositions)
-                  .addClass(regPos);
+                  .addClass(regulatorPosition);
         $indicatorRight.removeClass(removePositions)
-                   .addClass(ind1Pos);
+                   .addClass(indicatorRightPosition);
         $indicatorLeft.removeClass(removePositions)
-                   .addClass(ind2Pos);
+                   .addClass(indicatorLefttPosition);
     };
 
     // Get default position number
