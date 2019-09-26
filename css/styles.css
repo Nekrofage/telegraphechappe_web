@@ -1,6 +1,6 @@
 @import "reset.css";
 @import "fonts.css";
-@import "position.css";
+@import "rotation.css";
 
 .main {
     height: 100vh;

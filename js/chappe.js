@@ -12,13 +12,13 @@ $(document).ready(function() {
 
     // Set regulator and indicator position
     function removePositions(index, className) {
-        let pattern = /position.*/;
+        let pattern = /Rotation.*/;
         return (className.match(pattern) || []).join(' ');
     }
 
     function setPositions(positions, position) {
-        const   classReg = "positionReg",
-                classInd = "position";
+        const   classReg = "regulatorRotation",
+                classInd = "indicatorRotation";
         let regPos,
             ind1Pos,
             ind2Pos;
