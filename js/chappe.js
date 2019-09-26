@@ -40,7 +40,7 @@ $(document).ready(function() {
     $setterInput.val($setterMin);
 
     // Get list of positions
-    let jsonFile = "js/positions.json",
+    let jsonFile = "js/position.json",
         request = new XMLHttpRequest();
 
     request.open('GET', jsonFile);
