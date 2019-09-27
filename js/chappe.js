@@ -21,11 +21,11 @@ $(document).ready(function() {
                 classIndicator = "indicatorRotation";
         let regulatorPosition,
             indicatorRightPosition,
-            indicatorLefttPosition;
+            indicatorLeftPosition;
 
         regulatorPosition = classRegulator + positions[position].regulator;
         indicatorRightPosition = classIndicator + positions[position].indicatorRight;
-        indicatorLefttPosition = classIndicator + positions[position].indicatorLeft;
+        indicatorLeftPosition = classIndicator + positions[position].indicatorLeft;
 
         // Add classes on regulator and indicators
         $regulator.removeClass(removePositions)
@@ -33,7 +33,7 @@ $(document).ready(function() {
         $indicatorRight.removeClass(removePositions)
                    .addClass(indicatorRightPosition);
         $indicatorLeft.removeClass(removePositions)
-                   .addClass(indicatorLefttPosition);
+                   .addClass(indicatorLeftPosition);
     };
 
     // Get default position number

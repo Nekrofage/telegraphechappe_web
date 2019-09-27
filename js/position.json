@@ -11,13 +11,13 @@
     },
     "3": {
         "regulator": "0",
-        "indicatorRight": "0",
-        "indicatorLeft": "2"
+        "indicatorRight": "9",
+        "indicatorLeft": "6"
     },
     "4": {
         "regulator": "0",
-        "indicatorRight": "1",
-        "indicatorLeft": "0"
+        "indicatorRight": "9",
+        "indicatorLeft": "7"
     },
     "5": {
         "regulator": "0",
